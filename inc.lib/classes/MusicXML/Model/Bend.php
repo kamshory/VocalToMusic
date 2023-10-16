@@ -25,7 +25,7 @@ class Bend extends MusicXMLWriter
 	 * Does the bend accelerate during playback? Default is &quot;no&quot;.
 	 *
 	 * @Attribute(name="accelerate")
-	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
+	 * @Value(type="yes-no" required="false", allowed="yes,no")
 	 * @var string
 	 */
 	public $accelerate;

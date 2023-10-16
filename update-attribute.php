@@ -26,7 +26,7 @@ foreach ($containers as $container2)
                 $td = $cells1->item(0);
                 $div1 = $td->childNodes->item(1);
                 $div2 = $div1->childNodes->item(2);               
-                if($div2->childNodes->count() > 1)
+                if(isset($div2->childNodes[1]))
                 {
                     $div3 = $div2->childNodes->item(1)->childNodes->item(1);
                     $attributes[] = trim($div3->textContent);               

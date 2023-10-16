@@ -165,7 +165,7 @@ class DataType
         "xlink:type" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xlink-type/
         "xml:lang" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml-lang/
         "xml:space" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/xml-space/
-        "yes-no" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yes-no/
+        "yes-no" => array("traditional_type" => "string", "filter" => null, "allowed_value" => "yes,no"), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yes-no/
         "yes-no-number" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yes-no-number/
         "yyyy-mm-dd" => array("traditional_type" => "string", "filter" => null, "allowed_value" => null), // Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/data-types/yyyy-mm-dd/
     );
