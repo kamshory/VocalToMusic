@@ -1,6 +1,6 @@
 let audioPicker;
 let midiCreator;
-let maxTempo = 720;
+let maxTempo = 256;
 let resolution = 16;
 let channel = 0;
 let sampleRate = 32000;
@@ -289,6 +289,7 @@ function convertMidiToMusicXML(data)
   httpRequest.onreadystatechange = function(){
     console.log(httpRequest.responseText);
     loadXML(httpRequest.responseText);
+    
   };
   httpRequest.open("POST", "midi-to-musicxml.php");
   httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -308,7 +309,7 @@ window.onload = function () {
   }
 
   minEl.value = frequencyFromNoteNumber(24);
-  maxEl.value = frequencyFromNoteNumber(127);
+  maxEl.value = frequencyFromNoteNumber(60);
 
   let ts1 = '4/4 8';
   let ts2 = '3/4 8';
