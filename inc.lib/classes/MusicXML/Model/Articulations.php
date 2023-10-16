@@ -30,13 +30,13 @@ class Articulations extends MusicXMLWriter
 	 */
 	public $id;
 
-    /**
-     * @Element
-     * @var Staccato[]
-     */
-    public $staccato;
+        /**
+         * @Element
+         * @var Staccato[]
+         */
+        public $staccato;
 
-            /**
+        /**
          * Accent
          *
          * @Element(name="accent")

@@ -60,9 +60,7 @@ function renderInstrument(element, tracks) {
   element.innerHTML = "";
   element.appendChild(ul);
 }
-function hideCursor() {
-  document.querySelector("body").style.cursor = "none";
-}
+
 function handleFileSelect(evt) {
   document.querySelector("#fileloader").style.display = "none";
   document.querySelector("#container").style.display = "block";
