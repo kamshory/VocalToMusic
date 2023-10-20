@@ -6,15 +6,18 @@ use MusicXML\Model\Clef;
 use MusicXML\Model\Direction;
 use MusicXML\Model\DirectionType;
 use MusicXML\Model\Line;
+use MusicXML\Model\MeasurePartwise;
 use MusicXML\Model\Metronome;
-use MusicXML\Model\MetronomeRelation;
+use MusicXML\Model\Note;
 use MusicXML\Model\PerMinute;
 use MusicXML\Model\Sign;
 use MusicXML\Model\Sound;
 use MusicXML\Model\Work;
 use MusicXML\Model\WorkTitle;
 use MusicXML\Properties\AttackRelease;
+use MusicXML\Properties\BeamNote;
 use MusicXML\Properties\Coordinate;
+use MusicXML\Properties\TimeSignature;
 
 class MusicXMLUtil
 {
@@ -294,6 +297,70 @@ class MusicXMLUtil
             }
         }
         return false;
+    }
+    
+    /**
+     * Get element index from note index or false if not found
+     *
+     * @param MeasurePartwise $measure
+     * @param integer $idx
+     * @return integer|boolean
+     */
+    public static function getElementIndexFromNoteIndex($measure, $idx)
+    {
+        $cnt = 0;
+        foreach($measure->elements as $elementIndex=>$element)
+        {
+            if($element instanceof Note)
+            {
+                if($cnt == $idx)
+                {
+                    return $elementIndex;
+                }
+                $cnt++;
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * Get beams
+     *
+     * @param MeasurePartwise
+     * @param array $noteMessages
+     * @param integer $timebase
+     * @param TimeSignature $timeSignature
+     * @return BeamNote[] | false
+     */
+    public static function getBeams($measure, $noteMessages, $timebase, $timeSignature)
+    {
+        $beamNotes = array(); 
+        for($i = 0; $i < $timeSignature->getBeats(); $i++)
+        {
+            $time1 = $timebase * $i;
+            $time2 = $timebase * ($i + 1);
+            $j = 0;
+            foreach($noteMessages as $key=>$message)
+            {
+                if($noteMessages[$key]['event'] == 'On')
+                {
+                    $rtime = $noteMessages[$key]['time'] % $timebase;
+                    $duration = $noteMessages[$key]['duration'];
+                    if($rtime <= $time1 && ($rtime + $duration) <= $time2)
+                    {
+                        $k = self::getElementIndexFromNoteIndex($measure, $key);
+                        $beamNotes[] = new BeamNote($i, $j, $k);
+                        $j++;   
+                    }
+                }
+            }
+        }
+        if(empty($beamNotes))
+        {
+            return false;
+        }
+        $beamNotes = BeamNote::closeBeams($beamNotes);
+        return $beamNotes;
     }
     
     /**

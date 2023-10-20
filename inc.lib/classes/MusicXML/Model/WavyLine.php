@@ -36,7 +36,7 @@ class WavyLine extends MusicXMLWriter
 	 * If yes, the trill accelerates during playback. It is no if not specified.
 	 *
 	 * @Attribute(name="accelerate")
-	 * @Value(type="yes-no" required="false", allowed="yes,no")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $accelerate;

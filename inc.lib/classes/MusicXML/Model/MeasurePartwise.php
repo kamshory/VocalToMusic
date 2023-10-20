@@ -47,7 +47,7 @@ class MeasurePartwise extends MusicXMLWriter
 	 * Set to &quot;yes&quot; for measures where the measure number should never appear, such as pickup measures and the last half of mid-measure repeats. The value is &quot;no&quot; if not specified.
 	 *
 	 * @Attribute(name="implicit")
-	 * @Value(type="yes-no" required="false", allowed="yes,no")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $implicit;
@@ -58,7 +58,7 @@ class MeasurePartwise extends MusicXMLWriter
 	 * Intended for use in multimetric music like the Don Giovanni minuet. If set to &quot;yes&quot;, the left barline in this measure does not coincide with the left barline of measures in other parts. The value is &quot;no&quot; if not specified.
 	 *
 	 * @Attribute(name="non-controlling")
-	 * @Value(type="yes-no" required="false", allowed="yes,no")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $nonControlling;
@@ -86,115 +86,27 @@ class MeasurePartwise extends MusicXMLWriter
 	public $width;
 
     /**
-     * Attribute list
+     * Elements of measure
+     * -
+     * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of:
+     * - &lt;note&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
+     * - &lt;backup&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
+     * - &lt;forward&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/forward/
+     * - &lt;direction&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/direction/
+     * - &lt;attributes&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/attributes/
+     * - &lt;harmony&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/harmony/
+     * - &lt;figured-bass&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/figured-bass/
+     * - &lt;print&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/print/
+     * - &lt;sound&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sound/
+     * - &lt;listening&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/listening/
+     * - &lt;barline&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/barline/
+     * - &lt;grouping&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/grouping/
+     * - &lt;link&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/link/
+     * - &lt;bookmark&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bookmark/
      *
-     * @Element(name="attributes")
-     * @var Attributes
+     * @Element(identification="element")
+     * @var MusicXMLWriter[]
      */
-    public $attributes;
-
-    /**
-     * Direction
-     *
-     * @Element
-     * @var Direction[]
-     */
-    public $direction;
-
-    /**
-     * Note list
-     *
-     * @Element
-     * @var Note[]
-     */
-    public $note;
-
-    /**
-     * Backup
-     *
-     * @Element
-     * @var Backup[]
-     */
-    public $backup;
-
-    /**
-     * Grouping
-     *
-     * @Element(name="grouping")
-     * @var Grouping[]
-     */
-    public $grouping;
-
-    /**
-     * Link
-     *
-     * @Element(name="link")
-     * @var Link[]
-     */
-    public $link;
-
-    /**
-     * Bookmark
-     *
-     * @Element
-     * @var Bookmark[]
-     */
-    public $bookmark;
-
-    /**
-     * Forward
-     *
-     * @Element(name="forward")
-     * @var Forward
-     */
-    public $forward;
-
-    /**
-     * Harmony
-     *
-     * @Element(name="harmony")
-     * @var Harmony
-     */
-    public $harmony;
-
-    /**
-     * Figured bass
-     *
-     * @Element(name="figured-bass")
-     * @var FiguredBass
-     */
-    public $figuredBass;
-
-    /**
-     * XPrint
-     *
-     * @Element(name="print")
-     * @var XPrint
-     */
-    public $print;
-
-    /**
-     * Sound
-     *
-     * @Element(name="sound")
-     * @var Sound
-     */
-    public $sound;
-
-    /**
-     * Listening
-     *
-     * @Element(name="listening")
-     * @var Listening
-     */
-    public $listening;
-
-    /**
-     * Barline
-     *
-     * @Element(name="barline")
-     * @var Barline
-     */
-    public $barline;
+    public $elements;
 
 }

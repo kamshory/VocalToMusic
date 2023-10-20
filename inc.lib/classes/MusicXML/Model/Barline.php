@@ -37,7 +37,7 @@ class Barline extends MusicXMLWriter
 	 *
 	 * @Attribute(name="divisions")
 	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")
-	 * @var float
+	 * @var integer
 	 */
 	public $divisions;
 

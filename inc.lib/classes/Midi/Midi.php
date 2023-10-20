@@ -846,49 +846,6 @@ public function importMid($smf_path){
 	$this->tracks = $tracks;
 }
 
-public function parseMid($song){
-	if (strpos($song,'MThd')>0) 
-	{
-		$song = substr($song, strpos($song, 'MThd'));//get rid of RMID header
-	}
-	$header = substr($song,0,14);
-	if (substr($header,0,8)!="MThd\0\0\0\6") 
-	{
-		$this->_err('wrong MIDI-header');
-	}
-	$type = ord($header[9]);
-	if ($type>1) 
-	{
-		$this->_err('only SMF Typ 0 and 1 supported');
-	}
-	//$trackCnt = ord($header[10])*256 + ord($header[11]); //ignore
-	$timebase = ord($header[12])*256 + ord($header[13]);
-	$this->type = $type;
-	$this->timebase = $timebase;
-	## echo "".$this->timebase." ".__LINE__."\r\n";
-	$this->tempo = 0; // maybe (hopefully!) overwritten by _parseTrack
-	$trackStrings = explode('MTrk',$song);
-	array_shift($trackStrings);
-	$tracks = array();
-	$tsc = count($trackStrings);
-	if (func_num_args()>1){
-		$tn =  func_get_arg(1);
-		if ($tn>=$tsc) 
-		{
-			$this->_err('SMF has less tracks than $tn');
-		}
-		$tracks[] = $this->_parseTrack($trackStrings[$tn],$tn);
-	} 
-	else
-	{
-		for ($i=0;$i<$tsc;$i++)  
-		{
-			$tracks[] = $this->_parseTrack($trackStrings[$i],$i);
-		}
-	}
-	$this->tracks = $tracks;
-}
-
 //---------------------------------------------------------------
 // returns binary MIDI string
 //---------------------------------------------------------------
@@ -1496,13 +1453,13 @@ private function _parseTrack($binStr, $tn)//NOSONAR
 					  switch ($last){	  
 						  case 'On':
 						  case 'Off':
-							  $note = isset($binStr[$p])?ord($binStr[$p]):0;
+							  $note = ord(@$binStr[$p]);
 							  $vel = ord(@$binStr[$p+1]);
 							  $track[] = "$time $last ch=$chan n=$note v=$vel dt=$dt";
 							  $p+=2;
 							  break;
 						  case 'PrCh':
-							  $prog = isset($binStr[$p])?ord($binStr[$p]):0;
+							  $prog = ord($binStr[$p]);
 							  $track[] = "$time PrCh ch=$chan p=$prog";
 							  $p+=1;
 							  break;

@@ -15,23 +15,26 @@ $doc->loadHtml($html);
 $containers = $doc->getElementsByTagName('table');
 $tableIndex = 0;
 $rowIndex = 0;
-foreach ($containers as $container2) 
-{
-    foreach ($container2->getElementsByTagName('tbody') as $container3) 
-    {
-        foreach ($container3->getElementsByTagName('tr') as $tr) 
-        {
+foreach ($containers as $container2) {
+    foreach ($container2->getElementsByTagName('tbody') as $container3) {
+        foreach ($container3->getElementsByTagName('tr') as $tr) {
+
             if ($rowIndex > 0) {
                 $cells1 = $tr->getElementsByTagName('td');
                 $td = $cells1->item(0);
                 $div1 = $td->childNodes->item(1);
-                $div2 = $div1->childNodes->item(2);               
+                $div2 = $div1->childNodes->item(2);
+                
                 if(isset($div2->childNodes[1]))
                 {
-                    $div3 = $div2->childNodes->item(1)->childNodes->item(1);
-                    $attributes[] = trim($div3->textContent);               
-                }       
+                    $div3 = $div2->childNodes[1]->childNodes->item(1);
+                    $attributes[] = trim($div3->textContent);
+                    
+                }
+                
+                
             }
+
             $rowIndex++;
         }
     }

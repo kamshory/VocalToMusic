@@ -30,115 +30,27 @@ class PartTimewise extends MusicXMLWriter
 	 */
 	public $id;
 
-    /**
-     * Note list
+    /** 
+     * Elements of part
+     * -
+     * This element tag will exactly match the element name. See annotations of class of each elements. Element of part-timewise consists of:
+     * - &lt;note&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/note/
+     * - &lt;backup&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/backup/
+     * - &lt;forward&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/forward/
+     * - &lt;direction&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/direction/
+     * - &lt;attributes&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/attributes/
+     * - &lt;harmony&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/harmony/
+     * - &lt;figured-bass&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/figured-bass/
+     * - &lt;print&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/print/
+     * - &lt;sound&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/sound/
+     * - &lt;listening&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/listening/
+     * - &lt;barline&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/barline/
+     * - &lt;grouping&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/grouping/
+     * - &lt;link&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/link/
+     * - &lt;bookmark&gt; - See https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/bookmark/
      *
-     * @Element
-     * @var Note[]
+     * @Element(identification="element")
+     * @var MusicXMLWriter[]
      */
-    public $note;
-
-    /**
-     * Backup
-     *
-     * @Element
-     * @var Backup[]
-     */
-    public $backup;
-
-    /**
-     * Forward
-     *
-     * @Element
-     * @var Forward[]
-     */
-    public $forward;
-
-    /**
-     * Direction
-     *
-     * @Element
-     * @var Direction[]
-     */
-    public $direction;
-
-    /**
-     * Attribute list
-     *
-     * @Element(name="attributes")
-     * @var Attributes[]
-     */
-    public $attributes;
-
-    /**
-     * Hamony
-     *
-     * @Element(name="hamony")
-     * @var Hamony[]
-     */
-    public $hamony;
-
-    /**
-     * FiguredBass
-     *
-     * @Element(name="figuredBass")
-     * @var FiguredBass[]
-     */
-    public $figuredBass;
-
-    /**
-     * XPrint
-     *
-     * @Element(name="print")
-     * @var XPrint[]
-     */
-    public $print;
-
-    /**
-     * Sound
-     *
-     * @Element
-     * @var Sound
-     */
-    public $sound;
-
-    /**
-     * Listening
-     *
-     * @Element
-     * @var Listening[]
-     */
-    public $listening;
-
-    /**
-     * Baseline
-     *
-     * @Element
-     * @var Baseline[]
-     */
-    public $baseline;
-
-    /**
-     * Grouping
-     *
-     * @Element(name="grouping")
-     * @var Grouping[]
-     */
-    public $grouping;
-
-    /**
-     * Link
-     *
-     * @Element(name="link")
-     * @var Link[]
-     */
-    public $link;
-
-    /**
-     * Bookmark
-     *
-     * @Element
-     * @var Bookmark[]
-     */
-    public $bookmark;
+    public $elements;
 }

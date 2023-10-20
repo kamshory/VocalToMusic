@@ -3,7 +3,7 @@
 namespace MusicXML\Util;
 
 use DOMDocument;
-use MusicXML\Exceptions\FilePermissionExcetion;
+use Exceptions\FilePermissionExcetion;
 use ZipArchive;
 
 /**

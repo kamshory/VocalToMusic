@@ -25,7 +25,7 @@ class Fingering extends MusicXMLWriter
 	 * Indicates that this is an alternate fingering. It is no if not present.
 	 *
 	 * @Attribute(name="alternate")
-	 * @Value(type="yes-no" required="false", allowed="yes,no")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $alternate;
@@ -146,7 +146,7 @@ class Fingering extends MusicXMLWriter
 	 * Indicates that this fingering is a substitution in the middle of a note. It is no if not present.
 	 *
 	 * @Attribute(name="substitution")
-	 * @Value(type="yes-no" required="false", allowed="yes,no")
+	 * @Value(type="yes-no" required="false", allowed="ANY_VALUE")
 	 * @var string
 	 */
 	public $substitution;
