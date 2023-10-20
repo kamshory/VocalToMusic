@@ -351,6 +351,13 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
     }
     
+    public function parseMidi($midiData)
+    {
+        $midi = new MidiMeasure();
+        $midi->parseMid($midiData);
+        return $midi;
+    }
+    
     public function loadMidi($midiPath)
     {
         if(file_exists($midiPath))
@@ -1072,7 +1079,10 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 foreach($beams as $beamNote)
                 {
-                    $measure->elements[$beamNote->index]->beam = $beamNote->beam;
+                    if($measure->elements[$beamNote->index] instanceof Note)
+                    {
+                        $measure->elements[$beamNote->index]->beam = $beamNote->beam;
+                    }
                 }
             }
         }  

@@ -345,12 +345,15 @@ class MusicXMLUtil
                 if($noteMessages[$key]['event'] == 'On')
                 {
                     $rtime = $noteMessages[$key]['time'] % $timebase;
-                    $duration = $noteMessages[$key]['duration'];
-                    if($rtime <= $time1 && ($rtime + $duration) <= $time2)
+                    if(isset($noteMessages[$key]['duration']))
                     {
-                        $k = self::getElementIndexFromNoteIndex($measure, $key);
-                        $beamNotes[] = new BeamNote($i, $j, $k);
-                        $j++;   
+                        $duration = $noteMessages[$key]['duration'];
+                        if($rtime <= $time1 && ($rtime + $duration) <= $time2)
+                        {
+                            $k = self::getElementIndexFromNoteIndex($measure, $key);
+                            $beamNotes[] = new BeamNote($i, $j, $k);
+                            $j++;   
+                        }
                     }
                 }
             }

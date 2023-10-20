@@ -1,6 +1,6 @@
 let audioPicker;
 let midiCreator;
-let maxTempo = 256;
+let maxTempo = 130;
 let resolution = 16;
 let channel = 0;
 let sampleRate = 32000;
@@ -308,8 +308,8 @@ window.onload = function () {
     maxEl.append(new Option(noteName, frequency));
   }
 
-  minEl.value = frequencyFromNoteNumber(24);
-  maxEl.value = frequencyFromNoteNumber(60);
+  minEl.value = frequencyFromNoteNumber(32);
+  maxEl.value = frequencyFromNoteNumber(50);
 
   let ts1 = '4/4 8';
   let ts2 = '3/4 8';

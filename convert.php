@@ -15,7 +15,7 @@ function fileExtension($name)
 
 $fileList = array();
 
-$directory = __DIR__ . "/test-files";
+$directory = __DIR__ . "/files";
 $items = glob($directory . '/*');
 foreach ($items as $item) {
     if (is_file($item)) {
