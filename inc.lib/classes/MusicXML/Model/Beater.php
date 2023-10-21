@@ -21,8 +21,6 @@ class Beater extends MusicXMLWriter
 {
 	/**
 	 * Tip
-	 * -
-	 * Indicates the direction in which the tip of the beater points.
 	 *
 	 * @Attribute(name="tip")
 	 * @Value(type="tip-direction" required="false", allowed="ANY_VALUE")

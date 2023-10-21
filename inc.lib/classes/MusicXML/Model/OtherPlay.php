@@ -21,8 +21,6 @@ class OtherPlay extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates the type of playback to which the element content applies.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="true", allowed="ANY_VALUE")

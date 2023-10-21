@@ -21,8 +21,6 @@ class Encoder extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Standard values are music, words, and arrangement, but other types may be used. This attribute is only needed when there are multiple &lt;encoder&gt; elements.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

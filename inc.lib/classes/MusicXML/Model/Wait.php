@@ -21,8 +21,6 @@ class Wait extends MusicXMLWriter
 {
 	/**
 	 * Player
-	 * -
-	 * Restricts the &lt;wait&gt; to apply to a single player.
 	 *
 	 * @Attribute(name="player")
 	 * @Value(type="IDREF" required="false", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class Wait extends MusicXMLWriter
 
 	/**
 	 * Time only
-	 * -
-	 * Restricts the &lt;wait&gt; to apply to a set of times through a repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

@@ -21,8 +21,6 @@ class Instrument extends MusicXMLWriter
 {
 	/**
 	 * Id
-	 * -
-	 * An IDREF back to the &lt;score-instrument&gt; id attribute.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="IDREF" required="true", allowed="ANY_VALUE")

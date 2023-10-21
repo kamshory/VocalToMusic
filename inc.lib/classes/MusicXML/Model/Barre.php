@@ -21,8 +21,6 @@ class Barre extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * The start value indicates the lowest pitched string (e.g., the string with the highest MusicXML number). The stop value indicates the highest pitched string.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -32,8 +30,6 @@ class Barre extends MusicXMLWriter
 
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")

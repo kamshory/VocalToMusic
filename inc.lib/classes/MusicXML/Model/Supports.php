@@ -21,8 +21,6 @@ class Supports extends MusicXMLWriter
 {
 	/**
 	 * Element
-	 * -
-	 * Indicates the element that is supported or not by the encoding.
 	 *
 	 * @Attribute(name="element")
 	 * @Value(type="NMTOKEN" required="true", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class Supports extends MusicXMLWriter
 
 	/**
 	 * Type
-	 * -
-	 * If yes, the absence of a particular element with a specified attribute or value is meaningful. It indicates that this information is not present in the score. If no, the absence is not meaningful because the encoding does not include this type of information.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="yes-no" required="true", allowed="yes,no")
@@ -43,8 +39,6 @@ class Supports extends MusicXMLWriter
 
 	/**
 	 * Attribute
-	 * -
-	 * Indicates a specific element attribute that is supported or not by the encoding.
 	 *
 	 * @Attribute(name="attribute")
 	 * @Value(type="NMTOKEN" required="false", allowed="ANY_VALUE")
@@ -54,8 +48,6 @@ class Supports extends MusicXMLWriter
 
 	/**
 	 * Value
-	 * -
-	 * Indicates a specific attribute value that is supported or not by the encoding. Only used together with the attribute attribute.
 	 *
 	 * @Attribute(name="value")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

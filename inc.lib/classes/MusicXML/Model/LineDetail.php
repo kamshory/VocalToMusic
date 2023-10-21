@@ -21,8 +21,6 @@ class LineDetail extends MusicXMLWriter
 {
 	/**
 	 * Line
-	 * -
-	 * Indicates the staff line affected, numbered from bottom to top.
 	 *
 	 * @Attribute(name="line")
 	 * @Value(type="staff-line" required="true", min="1", max="infinite")
@@ -32,8 +30,6 @@ class LineDetail extends MusicXMLWriter
 
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class LineDetail extends MusicXMLWriter
 
 	/**
 	 * Line type
-	 * -
-	 * Specifies if the line is solid, dashed, dotted, or wavy.
 	 *
 	 * @Attribute(name="line-type")
 	 * @Value(type="line-type" required="false", allowed="dashed,dotted,solid,wavy")
@@ -54,8 +48,6 @@ class LineDetail extends MusicXMLWriter
 
 	/**
 	 * Print object
-	 * -
-	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -65,8 +57,6 @@ class LineDetail extends MusicXMLWriter
 
 	/**
 	 * Width
-	 * -
-	 * Staff line width in tenths.
 	 *
 	 * @Attribute(name="width")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")

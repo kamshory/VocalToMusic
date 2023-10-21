@@ -21,8 +21,6 @@ class MetronomeTuplet extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * 
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -32,8 +30,6 @@ class MetronomeTuplet extends MusicXMLWriter
 
 	/**
 	 * Bracket
-	 * -
-	 * 
 	 *
 	 * @Attribute(name="bracket")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -43,8 +39,6 @@ class MetronomeTuplet extends MusicXMLWriter
 
 	/**
 	 * Show number
-	 * -
-	 * 
 	 *
 	 * @Attribute(name="show-number")
 	 * @Value(type="show-tuplet" required="false", allowed="actual,both,none")

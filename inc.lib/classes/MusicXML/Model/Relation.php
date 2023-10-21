@@ -21,8 +21,6 @@ class Relation extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Standard type values are music, words, and arrangement, but other types may be used.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

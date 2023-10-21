@@ -21,8 +21,6 @@ class ScorePart extends MusicXMLWriter
 {
 	/**
 	 * Id
-	 * -
-	 * 
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="true", allowed="ANY_VALUE")

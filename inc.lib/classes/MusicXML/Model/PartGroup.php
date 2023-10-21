@@ -21,8 +21,6 @@ class PartGroup extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates the start or stop of the &lt;part-group&gt;.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -32,8 +30,6 @@ class PartGroup extends MusicXMLWriter
 
 	/**
 	 * Number
-	 * -
-	 * Distinguishes overlapping and nested &lt;part-group&gt; elements, not a sequence of &lt;part-group&gt; elements. The default value is 1.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

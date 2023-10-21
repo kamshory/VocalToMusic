@@ -21,8 +21,6 @@ class NoteSize extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * The type of note size being defined.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="note-size-type" required="true", allowed="cue,grace,grace-cue,large")

@@ -21,8 +21,6 @@ class StaffLayout extends MusicXMLWriter
 {
 	/**
 	 * Number
-	 * -
-	 * Refers to staff numbers within the part, from top to bottom on the system. A value of 1 is used if not present.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="staff-number" required="false", min="1", max="infinite")

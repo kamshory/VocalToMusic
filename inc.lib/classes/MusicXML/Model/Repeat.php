@@ -21,8 +21,6 @@ class Repeat extends MusicXMLWriter
 {
 	/**
 	 * Direction
-	 * -
-	 * The start of the repeat has a forward direction while the end of the repeat has a backward direction.
 	 *
 	 * @Attribute(name="direction")
 	 * @Value(type="backward-forward" required="true", allowed="backward,forward")
@@ -32,8 +30,6 @@ class Repeat extends MusicXMLWriter
 
 	/**
 	 * After jump
-	 * -
-	 * Indicates if the repeats are played after a jump due to a da capo or dal segno. It is only used with backward repeats that are not part of an ending.
 	 *
 	 * @Attribute(name="after-jump")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -43,8 +39,6 @@ class Repeat extends MusicXMLWriter
 
 	/**
 	 * Times
-	 * -
-	 * Indicates the number of times the repeated section is played. It is only used with backward repeats that are not part of an ending.
 	 *
 	 * @Attribute(name="times")
 	 * @Value(type="nonNegativeInteger" required="false", min="0", max="infinity")
@@ -54,8 +48,6 @@ class Repeat extends MusicXMLWriter
 
 	/**
 	 * Winged
-	 * -
-	 * Indicates whether the repeat has winged extensions that appear above and below the barline.
 	 *
 	 * @Attribute(name="winged")
 	 * @Value(type="winged" required="false", allowed="ANY_VALUE")

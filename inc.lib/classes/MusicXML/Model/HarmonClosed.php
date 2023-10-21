@@ -21,8 +21,6 @@ class HarmonClosed extends MusicXMLWriter
 {
 	/**
 	 * Location
-	 * -
-	 * Indicates which portion of the symbol is filled in when the element value is half.
 	 *
 	 * @Attribute(name="location")
 	 * @Value(type="harmon-closed-location" required="false", allowed="ANY_VALUE")

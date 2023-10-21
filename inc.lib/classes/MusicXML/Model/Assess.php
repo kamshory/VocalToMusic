@@ -21,8 +21,6 @@ class Assess extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * If yes, the note should be assessed; if no, it should not be assessed. If not specified, it is no for notes with a &lt;cue&gt; child element and yes otherwise.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="yes-no" required="true", allowed="yes,no")
@@ -32,8 +30,6 @@ class Assess extends MusicXMLWriter
 
 	/**
 	 * Player
-	 * -
-	 * Restricts the type to apply to a single player. If missing, the type applies to all players. It references the id attribute of a &lt;player&gt; element defined within the matching &lt;score-part&gt;.
 	 *
 	 * @Attribute(name="player")
 	 * @Value(type="IDREF" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class Assess extends MusicXMLWriter
 
 	/**
 	 * Time only
-	 * -
-	 * Restricts the type to apply to a set of times through a repeated section. If missing, the type applies all times through the repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

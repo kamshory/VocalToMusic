@@ -21,8 +21,6 @@ class Effect extends MusicXMLWriter
 {
 	/**
 	 * Smufl
-	 * -
-	 * Distinguishes different SMuFL stylistic alternates.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-pictogram-glyph-name" required="false", allowed="ANY_VALUE")

@@ -21,8 +21,6 @@ class Slash extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates the starting or stopping point of the section displaying slash notation.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -32,8 +30,6 @@ class Slash extends MusicXMLWriter
 
 	/**
 	 * Use dots
-	 * -
-	 * Indicates whether or not to use dots as well (for instance, with mixed rhythm patterns). The value is no if not specified. This attribute only has effect if use-stems is no.
 	 *
 	 * @Attribute(name="use-dots")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -43,8 +39,6 @@ class Slash extends MusicXMLWriter
 
 	/**
 	 * Use stems
-	 * -
-	 * If the slash is on every beat, use-stems is no (the default). To indicate rhythms but not pitches, use-stems is set to yes.
 	 *
 	 * @Attribute(name="use-stems")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

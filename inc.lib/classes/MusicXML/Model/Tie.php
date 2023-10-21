@@ -21,8 +21,6 @@ class Tie extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates if this is the start or stop of the tie.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -32,8 +30,6 @@ class Tie extends MusicXMLWriter
 
 	/**
 	 * Time only
-	 * -
-	 * Indicates which particular times to apply a &lt;tie&gt; element through a repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

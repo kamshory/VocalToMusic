@@ -21,8 +21,6 @@ class MeasureStyle extends MusicXMLWriter
 {
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Font family
-	 * -
-	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Font size
-	 * -
-	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -54,8 +48,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Font style
-	 * -
-	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -65,8 +57,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Font weight
-	 * -
-	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
@@ -76,8 +66,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Id
-	 * -
-	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -87,8 +75,6 @@ class MeasureStyle extends MusicXMLWriter
 
 	/**
 	 * Number
-	 * -
-	 * Allows a measure style to apply to only the specified staff in the part. If absent, the measure style applies to all staves in the part.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="staff-number" required="false", min="1", max="infinite")

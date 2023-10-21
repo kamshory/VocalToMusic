@@ -8,17 +8,17 @@ use MusicXML\MusicXMLWriter;
  * Percussion
  * -
  * Percussion is class of element &lt;percussion&gt; Open link at &#64;Referece to read full documentation.
- * Parent element: &lt;direction-type&gt;
+ * Parent element: none
  * 
  * @Xml
  * @MusicXML
  * @Element(name="percussion")
- * @ParentElement(name="direction-type")
  * @Reference https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/percussion/
  * @Data
  */
 class Percussion extends MusicXMLWriter
 {
+
 	/**
 	 * Color
 	 * -

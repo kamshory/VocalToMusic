@@ -21,8 +21,6 @@ class Elision extends MusicXMLWriter
 {
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class Elision extends MusicXMLWriter
 
 	/**
 	 * Font family
-	 * -
-	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class Elision extends MusicXMLWriter
 
 	/**
 	 * Font size
-	 * -
-	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -54,8 +48,6 @@ class Elision extends MusicXMLWriter
 
 	/**
 	 * Font style
-	 * -
-	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -65,8 +57,6 @@ class Elision extends MusicXMLWriter
 
 	/**
 	 * Font weight
-	 * -
-	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
@@ -76,8 +66,6 @@ class Elision extends MusicXMLWriter
 
 	/**
 	 * Smufl
-	 * -
-	 * Used to specify the elision symbol to use if the element text content is empty. It is ignored otherwise.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-lyrics-glyph-name" required="false", allowed="ANY_VALUE")

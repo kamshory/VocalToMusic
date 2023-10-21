@@ -21,8 +21,6 @@ class Text extends MusicXMLWriter
 {
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Dir
-	 * -
-	 * The text-direction attribute is used to adjust and override the Unicode bidirectional text algorithm, similar to the Directionality data category in the 
 	 *
 	 * @Attribute(name="dir")
 	 * @Value(type="text-direction" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Font family
-	 * -
-	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -54,8 +48,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Font size
-	 * -
-	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -65,8 +57,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Font style
-	 * -
-	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -76,8 +66,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Font weight
-	 * -
-	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
@@ -87,8 +75,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Letter spacing
-	 * -
-	 * Specifies text tracking. Values are either normal, which allows flexibility of letter-spacing for purposes of text justification. or a number representing the number of ems to add between each letter. The number may be negative in order to subtract space. The value is normal if not specified.
 	 *
 	 * @Attribute(name="letter-spacing")
 	 * @Value(type="number-or-normal" required="false", allowed="ANY_VALUE")
@@ -98,8 +84,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Line through
-	 * -
-	 * Number of lines to use when striking through text.
 	 *
 	 * @Attribute(name="line-through")
 	 * @Value(type="number-of-lines" required="false", min="-infinite", max="infinite")
@@ -109,8 +93,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Overline
-	 * -
-	 * Number of lines to use when overlining text.
 	 *
 	 * @Attribute(name="overline")
 	 * @Value(type="number-of-lines" required="false", min="-infinite", max="infinite")
@@ -120,8 +102,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Rotation
-	 * -
-	 * Used to rotate text around the alignment point specified by the halign and valign attributes. Positive values are clockwise rotations, while negative values are counter-clockwise rotations.
 	 *
 	 * @Attribute(name="rotation")
 	 * @Value(type="rotation-degrees" required="false", min="-180", max="180")
@@ -131,8 +111,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Underline
-	 * -
-	 * Number of lines to use when underlining text.
 	 *
 	 * @Attribute(name="underline")
 	 * @Value(type="number-of-lines" required="false", min="-infinite", max="infinite")
@@ -142,8 +120,6 @@ class Text extends MusicXMLWriter
 
 	/**
 	 * Xml:lang
-	 * -
-	 * Specifies the language used in the element content.
 	 *
 	 * @Attribute(name="xml:lang")
 	 * @Value(type="xml:lang" required="false", allowed="ANY_VALUE")

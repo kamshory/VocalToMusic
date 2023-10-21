@@ -21,8 +21,6 @@ class OtherDynamics extends MusicXMLWriter
 {
 	/**
 	 * Smufl
-	 * -
-	 * Indicates a particular Standard Music Font Layout (SMuFL) character using its canonical glyph name. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-glyph-name" required="false", allowed="ANY_VALUE")

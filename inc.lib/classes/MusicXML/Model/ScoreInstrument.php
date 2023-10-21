@@ -21,8 +21,6 @@ class ScoreInstrument extends MusicXMLWriter
 {
 	/**
 	 * Id
-	 * -
-	 * An identifier for this &lt;score-instrument&gt; that is unique to this document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="true", allowed="ANY_VALUE")

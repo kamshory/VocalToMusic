@@ -21,8 +21,6 @@ class XDouble extends MusicXMLWriter
 {
 	/**
 	 * Above
-	 * -
-	 * If the above attribute is set to yes, the doubling is one octave above what is written, as for mixed flute / piccolo parts in band literature. Otherwise the doubling is one octave below what is written, as for mixed cello / bass parts in orchestral literature.
 	 *
 	 * @Attribute(name="above")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

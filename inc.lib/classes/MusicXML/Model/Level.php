@@ -21,8 +21,6 @@ class Level extends MusicXMLWriter
 {
 	/**
 	 * Bracket
-	 * -
-	 * Specifies whether or not brackets are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="bracket")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -32,8 +30,6 @@ class Level extends MusicXMLWriter
 
 	/**
 	 * Parentheses
-	 * -
-	 * Specifies whether or not parentheses are put around a symbol for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="parentheses")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -43,8 +39,6 @@ class Level extends MusicXMLWriter
 
 	/**
 	 * Reference
-	 * -
-	 * If the reference attribute is yes, this indicates editorial information that is for display only and should not affect playback. For instance, a modern edition of older music may set reference=&quot;yes&quot; on the attributes containing the music's original clef, key, and time signature. It is no if not specified.
 	 *
 	 * @Attribute(name="reference")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -54,8 +48,6 @@ class Level extends MusicXMLWriter
 
 	/**
 	 * Size
-	 * -
-	 * Specifies the symbol size to use for an editorial indication. If not specified, it is left to application defaults.
 	 *
 	 * @Attribute(name="size")
 	 * @Value(type="symbol-size" required="false", allowed="cue,full,grace-cue,large")
@@ -65,8 +57,6 @@ class Level extends MusicXMLWriter
 
 	/**
 	 * Type
-	 * -
-	 * Indicates whether the editorial information applies to the start of a series of symbols, the end of a series of symbols, or a single symbol. It is single if not specified for compatibility with earlier MusicXML versions.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop-single" required="false", allowed="start,stop,single")

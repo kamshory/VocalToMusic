@@ -21,8 +21,6 @@ class Dashes extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates if this is the start, stop, or continuation of the dashes.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop-continue" required="true", allowed="start,stop,continue")
@@ -32,8 +30,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Dash length
-	 * -
-	 * The length of dashes in a dashed line.
 	 *
 	 * @Attribute(name="dash-length")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -54,8 +48,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Default x
-	 * -
-	 * Changes the computation of the default horizontal position. The origin is changed relative to the start of the entire current measure, at either the left barline or the start of the system. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -65,8 +57,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Default y
-	 * -
-	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -76,8 +66,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Id
-	 * -
-	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -87,8 +75,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Number
-	 * -
-	 * Distinguishes multiple dashes when they overlap in MusicXML document order.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="number-level" required="false", min="-infinite", max="infinite")
@@ -98,8 +84,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Relative x
-	 * -
-	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the &lt;offset&gt; element or directive attribute if those are present.
 	 *
 	 * @Attribute(name="relative-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -109,8 +93,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Relative y
-	 * -
-	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
 	 * @Attribute(name="relative-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -120,8 +102,6 @@ class Dashes extends MusicXMLWriter
 
 	/**
 	 * Space length
-	 * -
-	 * The length of spaces in a dashed line.
 	 *
 	 * @Attribute(name="space-length")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")

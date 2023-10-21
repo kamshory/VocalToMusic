@@ -21,8 +21,6 @@ class Lyric extends MusicXMLWriter
 {
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -32,8 +30,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Default x
-	 * -
-	 * Changes the computation of the default horizontal position. The origin is changed relative to the left-hand side of the note or the musical position within the bar. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -43,8 +39,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Default y
-	 * -
-	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -54,8 +48,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Id
-	 * -
-	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -65,8 +57,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Justify
-	 * -
-	 * Indicates left, center, or right justification. The default value varies for different elements. For elements where the justify attribute is present but the halign attribute is not, the justify attribute indicates horizontal alignment as well as justification.
 	 *
 	 * @Attribute(name="justify")
 	 * @Value(type="left-center-right" required="false", allowed="ANY_VALUE")
@@ -76,8 +66,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Name
-	 * -
-	 * Indicates the name of the lyric type. Common examples are verse and chorus.
 	 *
 	 * @Attribute(name="name")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")
@@ -87,8 +75,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Number
-	 * -
-	 * Specifies the lyric line when multiple lines are present.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="NMTOKEN" required="false", allowed="ANY_VALUE")
@@ -98,8 +84,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Placement
-	 * -
-	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
 	 * @Value(type="above-below" required="false", allowed="ubove,below")
@@ -109,8 +93,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Print object
-	 * -
-	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -120,8 +102,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Relative x
-	 * -
-	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the &lt;offset&gt; element or directive attribute if those are present.
 	 *
 	 * @Attribute(name="relative-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -131,8 +111,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Relative y
-	 * -
-	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
 	 * @Attribute(name="relative-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -142,8 +120,6 @@ class Lyric extends MusicXMLWriter
 
 	/**
 	 * Time only
-	 * -
-	 * Specifies which lyrics are to be sung which times through a repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

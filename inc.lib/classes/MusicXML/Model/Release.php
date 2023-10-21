@@ -21,8 +21,6 @@ class Release extends MusicXMLWriter
 {
 	/**
 	 * Offset
-	 * -
-	 * Specifies where the release starts in terms of divisions relative to the current note.
 	 *
 	 * @Attribute(name="offset")
 	 * @Value(type="divisions" required="false", min="-infinite", max="infinite")

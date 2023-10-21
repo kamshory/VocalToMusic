@@ -21,8 +21,6 @@ class InstrumentChange extends MusicXMLWriter
 {
 	/**
 	 * Id
-	 * -
-	 * Refers to the &lt;score-instrument&gt; affected by the change.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="IDREF" required="true", allowed="ANY_VALUE")

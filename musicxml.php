@@ -19,7 +19,7 @@ function getAttributeName($name)
 }
 
 
-function createAttribute($attribute)
+function createAttribute($attribute, $withDescription = false)
 {
     $name = $attribute['name'];
     $type = $attribute['type'];
@@ -42,12 +42,21 @@ function createAttribute($attribute)
     {
         $value = "@Value(type=\"$type\" required=\"$required\", allowed=\"$allowed\")";        
     }
+
+    if($withDescription)
+    {
+        $desc = "\t * -
+\t * $description
+";
+    }
+    else
+    {
+        $desc = "";
+    }
     
     $attributes = "\t/**
 \t * ".ucfirst(str_replace('-', ' ', $name))."
-\t * -
-\t * $description
-\t *
+$desc\t *
 \t * @Attribute(name=\"$name\")
 \t * $value
 \t * @var $traditionalType
@@ -101,7 +110,7 @@ function removeIfAny($parsed, $key)
     return $parsed;
 }
 
-function getObject($link, $element)
+function getObject($link, $element, $withDescription = false)
 {
 
 $url = "https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/$link/";
@@ -180,7 +189,7 @@ foreach ($attributes as $attribute) {
     $attributeName = getAttributeName($attribute['name']);
     $key = 'public $'.$attributeName.';';
     
-    $attr = createAttribute($attribute);
+    $attr = createAttribute($attribute, $withDescription);
     $parsed = removeIfAny($parsed, $key);
     
     $attrs[] = $attr;

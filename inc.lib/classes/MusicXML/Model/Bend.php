@@ -21,8 +21,6 @@ class Bend extends MusicXMLWriter
 {
 	/**
 	 * Accelerate
-	 * -
-	 * Does the bend accelerate during playback? Default is &quot;no&quot;.
 	 *
 	 * @Attribute(name="accelerate")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -32,8 +30,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Beats
-	 * -
-	 * The number of discrete elements (like MIDI pitch bends) used to represent a continuous bend or slide. Default is 4.
 	 *
 	 * @Attribute(name="beats")
 	 * @Value(type="trill-beats" required="false", min="-infinite", max="infinite")
@@ -43,8 +39,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Color
-	 * -
-	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -54,8 +48,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Default x
-	 * -
-	 * Changes the computation of the default horizontal position. The origin is changed relative to the left-hand side of the note or the musical position within the bar. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -65,8 +57,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Default y
-	 * -
-	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -76,8 +66,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * First beat
-	 * -
-	 * The percentage of the duration for starting a bend. Default is 25.
 	 *
 	 * @Attribute(name="first-beat")
 	 * @Value(type="percent" required="false", min="0", max="100")
@@ -87,8 +75,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Font family
-	 * -
-	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -98,8 +84,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Font size
-	 * -
-	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -109,8 +93,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Font style
-	 * -
-	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -120,8 +102,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Font weight
-	 * -
-	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
@@ -131,8 +111,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Last beat
-	 * -
-	 * The percentage of the duration for ending a bend. Default is 75.
 	 *
 	 * @Attribute(name="last-beat")
 	 * @Value(type="percent" required="false", min="0", max="100")
@@ -142,8 +120,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Relative x
-	 * -
-	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left. It should be interpreted in the context of the &lt;offset&gt; element or directive attribute if those are present.
 	 *
 	 * @Attribute(name="relative-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -153,8 +129,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Relative y
-	 * -
-	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down. It should be interpreted in the context of the placement attribute if that is present.
 	 *
 	 * @Attribute(name="relative-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -164,8 +138,6 @@ class Bend extends MusicXMLWriter
 
 	/**
 	 * Shape
-	 * -
-	 * Distinguishes between the angled bend symbols commonly used in standard notation and the curved bend symbols commonly used in both tablature and standard notation.
 	 *
 	 * @Attribute(name="shape")
 	 * @Value(type="bend-shape" required="false", allowed="angled,curved")

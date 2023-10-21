@@ -21,8 +21,6 @@ class MetronomeTied extends MusicXMLWriter
 {
 	/**
 	 * Type
-	 * -
-	 * Indicates if this is the start or stop of the tie.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")

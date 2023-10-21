@@ -21,8 +21,6 @@ class Direction extends MusicXMLWriter
 {
 	/**
 	 * Directive
-	 * -
-	 * Changes the default-x position of a direction. It indicates that the left-hand side of the direction is aligned with the left-hand side of the time signature. If no time signature is present, the direction is aligned with the left-hand side of the first music notational element in the measure. If a default-x, justify, or halign attribute is present, it overrides this attribute.
 	 *
 	 * @Attribute(name="directive")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -32,8 +30,6 @@ class Direction extends MusicXMLWriter
 
 	/**
 	 * Id
-	 * -
-	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -43,8 +39,6 @@ class Direction extends MusicXMLWriter
 
 	/**
 	 * Placement
-	 * -
-	 * Indicates whether something is above or below another element, such as a note or a notation.
 	 *
 	 * @Attribute(name="placement")
 	 * @Value(type="above-below" required="false", allowed="ubove,below")
@@ -54,8 +48,6 @@ class Direction extends MusicXMLWriter
 
 	/**
 	 * System
-	 * -
-	 * Distinguishes elements that are associated with a system rather than the particular part where the element appears.
 	 *
 	 * @Attribute(name="system")
 	 * @Value(type="system-relation" required="false", allowed="only-top,also-top,none")

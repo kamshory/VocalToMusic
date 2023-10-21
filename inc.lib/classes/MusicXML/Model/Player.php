@@ -21,8 +21,6 @@ class Player extends MusicXMLWriter
 {
 	/**
 	 * Id
-	 * -
-	 * An identifier for this &lt;player&gt; that is unique within this document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="true", allowed="ANY_VALUE")
