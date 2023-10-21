@@ -315,17 +315,20 @@ abstract class MusicXMLBase
         {
             foreach(MusicXMLInstrument::INSTRUMENT_LIST as $index=>$chk)
             {
-                $chkArr = explode('.', $chk);
-                if(in_array($search, $chkArr))
+                if($chk != null)
                 {
-                    echo "NAME = $instrumentName; SERACH = '$search', CHANNEL ID = $channelId, PROGRAM ID = $programId; $index; $chk \r\n";
-                    if(!isset($found[$chk]))
+                    $chkArr = explode('.', $chk);
+                    if(in_array($search, $chkArr))
                     {
-                        $found[$chk] = 1;
-                    }
-                    else
-                    {
-                        $found[$chk] ++;
+                        echo "NAME = $instrumentName; SERACH = '$search', CHANNEL ID = $channelId, PROGRAM ID = $programId; $index; $chk \r\n";
+                        if(!isset($found[$chk]))
+                        {
+                            $found[$chk] = 1;
+                        }
+                        else
+                        {
+                            $found[$chk] ++;
+                        }
                     }
                 }
             }

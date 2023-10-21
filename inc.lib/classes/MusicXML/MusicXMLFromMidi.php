@@ -1198,8 +1198,6 @@ class MusicXMLFromMidi extends MusicXMLBase
             $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
             $measure->elements[] = $note;
         }
-        file_put_contents('test.txt', print_r($this->tieStop, true));
-
         return $measure;
     }
 
