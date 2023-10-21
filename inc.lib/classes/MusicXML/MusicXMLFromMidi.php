@@ -114,6 +114,7 @@ class MusicXMLFromMidi extends MusicXMLBase
     private $noteMax = 0;
     private $maxMeasure = 0;
     private $lastNote = array(); 
+    private $tieStop = array();
 
     /**
      * Reset properties
@@ -135,6 +136,7 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->noteMax = 0;
         $this->maxMeasure = 0;
         $this->lastNote = array(); 
+        $this->tieStop = array();
     }
 
     
@@ -924,17 +926,6 @@ class MusicXMLFromMidi extends MusicXMLBase
     }
 
     /**
-     * Get measure width
-     *
-     * @param integer $measureIndex
-     * @return float
-     */
-    private function getWidth($measureIndex)
-    {
-        return isset($this->measureWidth[$measureIndex]) ? $this->measureWidth[$measureIndex] : $this->minWidth;
-    }
-
-    /**
      * Get measure
      *
      * @param string $partId
@@ -1069,8 +1060,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                             $measure->elements[$elementIndex]->notations[0]->technical[0] = $technical;
                         }
                     }
-                }
-                
+                }              
             }
             
             // set beam if any
@@ -1085,13 +1075,11 @@ class MusicXMLFromMidi extends MusicXMLBase
                     }
                 }
             }
-        }  
-        
+        }      
         
         return $measure;
     }
 
-    private $tieStop = array();
 
     /**
      * Add element to measure
@@ -1161,8 +1149,7 @@ class MusicXMLFromMidi extends MusicXMLBase
                 $note = $this->createSoundNote($measureIndex, $channelId, $message, $divisions, $timebase, $duration);
 
 
-                $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());
-                
+                $toffset = $message['abstime'] % ($timebase * $this->timeSignature->getBeats());            
                 $tend = $toffset + $duration;
                 if($tend > $max)
                 {
@@ -1207,18 +1194,6 @@ class MusicXMLFromMidi extends MusicXMLBase
     }
 
     /**
-     * Check if note is trimmed or note
-     *
-     * @param Note $note
-     * @return boolean
-     */
-    private function isTrimmed($note)
-    {
-        echo "IS TRIMMED ".$note->tie."\r\n";
-        return isset($note->tie) && isset($note->tie->type);
-    }
-
-    /**
      * Trim note duration
      *
      * @param Note $note
@@ -1232,20 +1207,14 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private function trimNoteDuration($note, $toffset, $divisions, $timebase, $duration, $tend, $max)
     {
-        $newDuration = $max - $toffset;
-        //echo "MAX = $max\r\n";
-        //echo "toffset = $toffset\r\n";
-        //echo "NEW DURATION = $newDuration\r\n";
-        
+        $newDuration = $max - $toffset;        
         while($newDuration < 0)
         {
             $newDuration += $timebase;
         }
-        //echo "NEW DURATION = $newDuration\r\n";
         if($duration > 0)
         {
             $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
-            //echo "NEW DURATION = $newDuration\r\n";
             $note->duration = new Duration($newDuration);                                
             $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
             $note->release = $note->attack + $newDuration;
