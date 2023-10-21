@@ -101,14 +101,14 @@ function removeIfAny($parsed, $key)
     return $parsed;
 }
 
-function getObject($element)
+function getObject($link, $element)
 {
 
-$url = "https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/$element/";
+$url = "https://www.w3.org/2021/06/musicxml40/musicxml-reference/elements/$link/";
 
 libxml_use_internal_errors(true);
 
-$name = basename($url);
+$name = basename($element);
 $className = getClassName($name);
 
 
@@ -234,7 +234,8 @@ use MusicXML\MusicXMLWriter;
 class '.$className.' extends MusicXMLWriter
 {
 '.implode("\r\n", $attrs).'    
-}';
+}
+';
 $content = $template;
 $content = trim($content, " \t\r\n ");
 if(substr($content, strlen($content) - 1) != '}')
@@ -279,13 +280,11 @@ class '.$className.' extends MusicXMLWriter
     $content = trim($content, " \t\r\n ");
     if(substr($content, strlen($content) - 1) != '}')
     {
-        $content .= "\r\n}";
+        $content .= "\r\n}\r\n";
     }
 
 
     file_put_contents($path, $content);
 }
-
-
 }
 }

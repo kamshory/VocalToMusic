@@ -19,12 +19,12 @@ foreach($lis as $li)
 {
     if(isset($li->childNodes->item(0)->attributes))
     {
-        $attributes[] = trim($li->childNodes->item(0)->attributes->getNamedItem('href')->nodeValue, "/");   
+        $attributes[] = array(trim($li->childNodes->item(0)->attributes->getNamedItem('href')->nodeValue, "/"), trim($li->childNodes->item(0)->nodeValue, '<>'));   
     }
 }
 foreach($attributes as $attribute)
 {
-    $className = str_replace(' ', '', ucwords(str_replace('-', ' ', $attribute)));
-    getObject($attribute);
-    echo "UPDATE $attribute\r\n";
+    $className = str_replace(' ', '', ucwords(str_replace('-', ' ', $attribute[1])));
+    getObject($attribute[0], $attribute[1]);
+    echo "UPDATE $attribute[0] - <$attribute[1]>\r\n";
 }
