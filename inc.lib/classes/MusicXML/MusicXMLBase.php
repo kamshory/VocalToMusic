@@ -313,8 +313,9 @@ abstract class MusicXMLBase
         $found = array();
         foreach($explodedName as $search)
         {
-            foreach(MusicXMLInstrument::INSTRUMENT_LIST as $index=>$chk)
+            foreach(MusicXMLInstrument::INSTRUMENT_LIST as $index=>$chkx)
             {
+                $chk = $chkx[0];
                 if($chk != null)
                 {
                     $chkArr = explode('.', $chk);

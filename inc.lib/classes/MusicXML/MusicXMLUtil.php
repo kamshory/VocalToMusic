@@ -386,7 +386,13 @@ class MusicXMLUtil
                 return array('Instrument ' . $id, 'Instrument ' . $id);
             }
             
-        } else {
+        } 
+        else 
+        {
+            if($instrumentId > 127)
+            {
+                $instrumentId = $instrumentId % 127;
+            }
             return MusicXMLInstrument::INSTRUMENT_LIST[$instrumentId];
         }
     }

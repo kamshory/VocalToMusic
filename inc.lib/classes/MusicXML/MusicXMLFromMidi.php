@@ -436,7 +436,6 @@ class MusicXMLFromMidi extends MusicXMLBase
                         eval("\$" . $msg[3] . ';'); // $p
                         $ch = isset($ch) ? $ch : 0;
                         $p = isset($p) ? $p : 0;
-
                         $instrument = MusicXMLUtil::getInstrumentName($p, $ch);
 
                         $partId = "P" . $ch;
