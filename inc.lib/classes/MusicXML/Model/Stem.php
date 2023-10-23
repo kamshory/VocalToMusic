@@ -21,6 +21,8 @@ class Stem extends MusicXMLWriter
 {
 	/**
 	 * Color
+	 * -
+	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Stem extends MusicXMLWriter
 
 	/**
 	 * Default x
+	 * -
+	 * For down and up stems, changes the computation of the default horizontal position of the end of the stem. The origin is changed relative to the left-hand side of the note. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -39,6 +43,8 @@ class Stem extends MusicXMLWriter
 
 	/**
 	 * Default y
+	 * -
+	 * For down and up stems, changes the computation of the default vertical position of the end of the stem. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -48,6 +54,8 @@ class Stem extends MusicXMLWriter
 
 	/**
 	 * Relative x
+	 * -
+	 * For down and up stems, changes the horizontal position of the end of the stem relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="relative-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -57,6 +65,8 @@ class Stem extends MusicXMLWriter
 
 	/**
 	 * Relative y
+	 * -
+	 * For down and up stems, changes the vertical position of the end of the stem relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y lengthens a stem while negative y shortens it. Negative values of relative-y that would flip a stem instead of shortening it are ignored.
 	 *
 	 * @Attribute(name="relative-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")

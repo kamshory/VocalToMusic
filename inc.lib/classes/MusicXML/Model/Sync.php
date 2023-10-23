@@ -21,6 +21,8 @@ class Sync extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Specifies the style that a score following application should use to synchronize an accompaniment with a performer.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="sync-type" required="true", allowed="none,tempo,mostly-tempo,mostly-event,event,always-event")
@@ -30,6 +32,8 @@ class Sync extends MusicXMLWriter
 
 	/**
 	 * Latency
+	 * -
+	 * Specifies a latency time in milliseconds that the listening application should expect from the performer.
 	 *
 	 * @Attribute(name="latency")
 	 * @Value(type="milliseconds" required="false", min="-infinite", max="infinite")
@@ -39,6 +43,8 @@ class Sync extends MusicXMLWriter
 
 	/**
 	 * Player
+	 * -
+	 * Restricts the element to apply to a single &lt;player&gt;.
 	 *
 	 * @Attribute(name="player")
 	 * @Value(type="IDREF" required="false", allowed="ANY_VALUE")
@@ -48,6 +54,8 @@ class Sync extends MusicXMLWriter
 
 	/**
 	 * Time only
+	 * -
+	 * Restricts the element to apply to a set of times through a repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

@@ -21,6 +21,8 @@ class Stick extends MusicXMLWriter
 {
 	/**
 	 * Dashed circle
+	 * -
+	 * Indicates the presence of a dashed circle around the round beater part of a pictogram. The value is no if not specified.
 	 *
 	 * @Attribute(name="dashed-circle")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -30,6 +32,8 @@ class Stick extends MusicXMLWriter
 
 	/**
 	 * Parentheses
+	 * -
+	 * Indicates the presence of parentheses around the round beater part of a pictogram. The value is no if not specified.
 	 *
 	 * @Attribute(name="parentheses")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -39,6 +43,8 @@ class Stick extends MusicXMLWriter
 
 	/**
 	 * Tip
+	 * -
+	 * Represents the direction in which the tip of a stick or beater points, using Unicode arrow terminology.
 	 *
 	 * @Attribute(name="tip")
 	 * @Value(type="tip-direction" required="false", allowed="ANY_VALUE")

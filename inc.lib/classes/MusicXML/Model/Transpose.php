@@ -21,6 +21,8 @@ class Transpose extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Transpose extends MusicXMLWriter
 
 	/**
 	 * Number
+	 * -
+	 * Allows a transposition to apply to only the specified staff in the part. If absent, the transposition applies to all staves in the part. Per-staff transposition is most often used in parts that represent multiple instruments.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="staff-number" required="false", min="1", max="infinite")

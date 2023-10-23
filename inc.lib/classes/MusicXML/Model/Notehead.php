@@ -21,6 +21,8 @@ class Notehead extends MusicXMLWriter
 {
 	/**
 	 * Color
+	 * -
+	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Filled
+	 * -
+	 * Changes the appearance of enclosed shapes from the default of hollow for half notes and longer, and filled otherwise.
 	 *
 	 * @Attribute(name="filled")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -39,6 +43,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Font family
+	 * -
+	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -48,6 +54,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Font size
+	 * -
+	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -57,6 +65,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Font style
+	 * -
+	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -66,6 +76,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Font weight
+	 * -
+	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")
@@ -75,6 +87,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Parentheses
+	 * -
+	 * If yes, the notehead is parenthesized. It is no if not specified.
 	 *
 	 * @Attribute(name="parentheses")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -84,6 +98,8 @@ class Notehead extends MusicXMLWriter
 
 	/**
 	 * Smufl
+	 * -
+	 * Indicates a particular Standard Music Font Layout (SMuFL) character using its canonical glyph name. Sometimes this is a formatting choice, and sometimes this is a refinement of the semantic meaning of an element.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-glyph-name" required="false", allowed="ANY_VALUE")

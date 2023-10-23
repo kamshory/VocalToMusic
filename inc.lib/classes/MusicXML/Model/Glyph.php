@@ -21,6 +21,8 @@ class Glyph extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * The type of glyph that is being defined.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="glyph-type" required="true", allowed="ANY_VALUE")

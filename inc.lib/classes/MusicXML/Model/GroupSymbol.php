@@ -21,6 +21,8 @@ class GroupSymbol extends MusicXMLWriter
 {
 	/**
 	 * Color
+	 * -
+	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class GroupSymbol extends MusicXMLWriter
 
 	/**
 	 * Default x
+	 * -
+	 * Changes the computation of the default horizontal position. The origin is changed relative to the start of the first measure on the system. These values are used when the current measure or a succeeding measure starts a new system. Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="default-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -39,6 +43,8 @@ class GroupSymbol extends MusicXMLWriter
 
 	/**
 	 * Default y
+	 * -
+	 * Changes the computation of the default vertical position. The origin is changed relative to the top line of the staff. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="default-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -48,6 +54,8 @@ class GroupSymbol extends MusicXMLWriter
 
 	/**
 	 * Relative x
+	 * -
+	 * Changes the horizontal position relative to the default position, either as computed by the individual program, or as overridden by the default-x attribute.  Positive x is right and negative x is left.
 	 *
 	 * @Attribute(name="relative-x")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")
@@ -57,6 +65,8 @@ class GroupSymbol extends MusicXMLWriter
 
 	/**
 	 * Relative y
+	 * -
+	 * Changes the vertical position relative to the default position, either as computed by the individual program, or as overridden by the default-y attribute. Positive y is up and negative y is down.
 	 *
 	 * @Attribute(name="relative-y")
 	 * @Value(type="tenths" required="false", min="-infinite", max="infinite")

@@ -21,6 +21,8 @@ class Play extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Refers to a specific &lt;score-instrument&gt; to which this playback applies.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="IDREF" required="false", allowed="ANY_VALUE")

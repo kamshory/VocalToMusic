@@ -21,6 +21,8 @@ class OtherListening extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Indicates the type of listening to which the element content applies.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="true", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class OtherListening extends MusicXMLWriter
 
 	/**
 	 * Player
+	 * -
+	 * Restricts the element to apply to a single player.
 	 *
 	 * @Attribute(name="player")
 	 * @Value(type="IDREF" required="false", allowed="ANY_VALUE")
@@ -39,6 +43,8 @@ class OtherListening extends MusicXMLWriter
 
 	/**
 	 * Time only
+	 * -
+	 * Restrict the element to apply to a set of times through a repeated section.
 	 *
 	 * @Attribute(name="time-only")
 	 * @Value(type="time-only" required="false", allowed="ANY_VALUE")

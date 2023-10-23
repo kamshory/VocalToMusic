@@ -21,6 +21,8 @@ class Pitched extends MusicXMLWriter
 {
 	/**
 	 * Smufl
+	 * -
+	 * Distinguishes different SMuFL glyphs for a particular pictogram within the 
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-pictogram-glyph-name" required="false", allowed="ANY_VALUE")

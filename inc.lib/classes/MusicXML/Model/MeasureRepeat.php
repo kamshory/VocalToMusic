@@ -21,6 +21,8 @@ class MeasureRepeat extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Indicates the starting or stopping point of the section displaying the measure repeat symbols.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -30,6 +32,8 @@ class MeasureRepeat extends MusicXMLWriter
 
 	/**
 	 * Slashes
+	 * -
+	 * Specifies the number of slashes to use in the symbol. The value is 1 if not specified.
 	 *
 	 * @Attribute(name="slashes")
 	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")

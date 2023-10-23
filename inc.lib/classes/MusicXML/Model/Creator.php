@@ -21,6 +21,8 @@ class Creator extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Distinguishes different creative contributions. Thus there can be multiple &lt;creator&gt; elements within an &lt;identification&gt; element. Standard values are composer, lyricist, and arranger. Other values may be used for different types of creative roles. This attribute should usually be used even if there is just a single &lt;creator&gt; element.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

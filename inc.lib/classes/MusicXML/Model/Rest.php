@@ -21,6 +21,8 @@ class Rest extends MusicXMLWriter
 {
 	/**
 	 * Measure
+	 * -
+	 * If yes, this indicates this is a complete measure rest.
 	 *
 	 * @Attribute(name="measure")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

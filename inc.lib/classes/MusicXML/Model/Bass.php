@@ -21,6 +21,8 @@ class Bass extends MusicXMLWriter
 {
 	/**
 	 * Arrangement
+	 * -
+	 * Specifies where the bass is displayed relative to what precedes it.
 	 *
 	 * @Attribute(name="arrangement")
 	 * @Value(type="harmony-arrangement" required="false", allowed="ANY_VALUE")

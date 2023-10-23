@@ -21,6 +21,8 @@ class LyricLanguage extends MusicXMLWriter
 {
 	/**
 	 * Xml:lang
+	 * -
+	 * The default language for the specified lyric name and number.
 	 *
 	 * @Attribute(name="xml:lang")
 	 * @Value(type="xml:lang" required="true", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class LyricLanguage extends MusicXMLWriter
 
 	/**
 	 * Name
+	 * -
+	 * The lyric name for which this is the default, corresponding to the name attribute in the &lt;lyric&gt; element.
 	 *
 	 * @Attribute(name="name")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")
@@ -39,6 +43,8 @@ class LyricLanguage extends MusicXMLWriter
 
 	/**
 	 * Number
+	 * -
+	 * The lyric number for which this is the default, corresponding to the number attribute in the &lt;lyric&gt; element.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="NMTOKEN" required="false", allowed="ANY_VALUE")

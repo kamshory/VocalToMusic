@@ -21,6 +21,8 @@ class InstrumentLink extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Refers to a &lt;score-instrument&gt; id attribute.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="IDREF" required="true", allowed="ANY_VALUE")

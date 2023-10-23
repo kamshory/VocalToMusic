@@ -21,6 +21,8 @@ class Distance extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * The type of distance being defined.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="distance-type" required="true", allowed="ANY_VALUE")
