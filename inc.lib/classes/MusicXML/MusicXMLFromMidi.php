@@ -45,7 +45,19 @@ class MusicXMLFromMidi extends MusicXMLBase
 {
     
     const DEFAULT_DIVISONS = 24;
+    
+    /**
+     * Width scale
+     *
+     * @var integer
+     */
     private $widthScale = 6;
+    
+    /**
+     * Minimum width of measure
+     *
+     * @var integer
+     */
     private $minWidth = 120;
     /**
      * Part list
@@ -95,7 +107,14 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @var string
      */
     private $copyright = "";
+    
+    /**
+     * Time signature
+     *
+     * @var TimeSignature
+     */
     private $timeSignature = null;
+    
     /**
      * Division
      *
@@ -110,10 +129,39 @@ class MusicXMLFromMidi extends MusicXMLBase
      */
     private $measureWidth = array();
 
+    /**
+     * Note min
+     *
+     * @var integer
+     */
     private $noteMin = 127;
+    
+    /**
+     * Not max
+     *
+     * @var integer
+     */
     private $noteMax = 0;
+    
+    /**
+     * Max measure
+     *
+     * @var integer
+     */
     private $maxMeasure = 0;
+    
+    /**
+     * Last note
+     *
+     * @var array
+     */
     private $lastNote = array(); 
+    
+    /**
+     * Tie stop
+     *
+     * @var array
+     */
     private $tieStop = array();
 
     /**
@@ -139,8 +187,6 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->tieStop = array();
     }
 
-    
-
     /**
      * Set note duration
      *
@@ -157,6 +203,17 @@ class MusicXMLFromMidi extends MusicXMLBase
         $this->measures[$ch][$indexOn][$lastOn]['duration'] = $duration;
     }
 
+    /**
+     * Add part list
+     *
+     * @param integer $channelId
+     * @param integer $partId
+     * @param integer $programId
+     * @param integer $instrumentId
+     * @param array $instrument
+     * @param integer $port
+     * @return void
+     */
     private function addPartList(
         $channelId, 
         $partId,
@@ -353,6 +410,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         }
     }
     
+    /**
+     * Parse MIDI
+     *
+     * @param string $midiData
+     * @return MidiMeasure
+     */
     public function parseMidi($midiData)
     {
         $midi = new MidiMeasure();
@@ -360,6 +423,12 @@ class MusicXMLFromMidi extends MusicXMLBase
         return $midi;
     }
     
+    /**
+     * Load MIDI file
+     *
+     * @param string $midiPath
+     * @return MidiMeasure
+     */
     public function loadMidi($midiPath)
     {
         if(file_exists($midiPath))
