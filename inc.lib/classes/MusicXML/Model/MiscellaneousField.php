@@ -21,6 +21,8 @@ class MiscellaneousField extends MusicXMLWriter
 {
 	/**
 	 * Name
+	 * -
+	 * Indicates the type of metadata the element content represents.
 	 *
 	 * @Attribute(name="name")
 	 * @Value(type="token" required="true", allowed="ANY_VALUE")

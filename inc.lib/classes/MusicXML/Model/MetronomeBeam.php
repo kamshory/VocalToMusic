@@ -21,6 +21,8 @@ class MetronomeBeam extends MusicXMLWriter
 {
 	/**
 	 * Number
+	 * -
+	 * Indicates eighth note through 1024th note beams using number values 1 thru 8 respectively. The default value is 1.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="beam-level" required="false", min="-infinite", max="infinite")

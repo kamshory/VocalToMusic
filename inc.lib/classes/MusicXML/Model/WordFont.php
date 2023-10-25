@@ -21,6 +21,8 @@ class WordFont extends MusicXMLWriter
 {
 	/**
 	 * Font family
+	 * -
+	 * A comma-separated list of font names.
 	 *
 	 * @Attribute(name="font-family")
 	 * @Value(type="font-family" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class WordFont extends MusicXMLWriter
 
 	/**
 	 * Font size
+	 * -
+	 * One of the CSS sizes or a numeric point size.
 	 *
 	 * @Attribute(name="font-size")
 	 * @Value(type="font-size" required="false", allowed="ANY_VALUE")
@@ -39,6 +43,8 @@ class WordFont extends MusicXMLWriter
 
 	/**
 	 * Font style
+	 * -
+	 * Normal or italic style.
 	 *
 	 * @Attribute(name="font-style")
 	 * @Value(type="font-style" required="false", allowed="ANY_VALUE")
@@ -48,6 +54,8 @@ class WordFont extends MusicXMLWriter
 
 	/**
 	 * Font weight
+	 * -
+	 * Normal or bold weight.
 	 *
 	 * @Attribute(name="font-weight")
 	 * @Value(type="font-weight" required="false", allowed="ANY_VALUE")

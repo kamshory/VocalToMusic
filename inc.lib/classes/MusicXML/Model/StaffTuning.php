@@ -21,6 +21,8 @@ class StaffTuning extends MusicXMLWriter
 {
 	/**
 	 * Line
+	 * -
+	 * Indicates the staff line for this tuning, numbered from bottom to top.
 	 *
 	 * @Attribute(name="line")
 	 * @Value(type="staff-line" required="true", min="1", max="infinite")

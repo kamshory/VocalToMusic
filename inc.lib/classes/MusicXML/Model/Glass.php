@@ -21,6 +21,8 @@ class Glass extends MusicXMLWriter
 {
 	/**
 	 * Smufl
+	 * -
+	 * Distinguishes different SMuFL glyphs for wind chimes in the Chimes pictograms range, including those made of materials other than glass.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-pictogram-glyph-name" required="false", allowed="ANY_VALUE")

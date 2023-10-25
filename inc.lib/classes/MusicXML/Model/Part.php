@@ -21,6 +21,8 @@ class Part extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * An IDREF back to a &lt;score-part&gt; element within the &lt;part-list&gt; element.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="IDREF" required="true", allowed="ANY_VALUE")

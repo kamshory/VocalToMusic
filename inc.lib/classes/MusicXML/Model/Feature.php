@@ -21,6 +21,8 @@ class Feature extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Represents the type of the feature. This type is flexible to allow for different analyses.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

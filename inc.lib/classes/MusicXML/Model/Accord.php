@@ -21,6 +21,8 @@ class Accord extends MusicXMLWriter
 {
 	/**
 	 * String
+	 * -
+	 * Strings are numbered from high to low.
 	 *
 	 * @Attribute(name="string")
 	 * @Value(type="string-number" required="false", min="-infinite", max="infinite")

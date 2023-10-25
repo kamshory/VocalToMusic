@@ -21,6 +21,8 @@ class KeyOctave extends MusicXMLWriter
 {
 	/**
 	 * Number
+	 * -
+	 * A positive integer that refers to the key signature element in left-to-right order.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="positiveInteger" required="true", min="0", max="infinite")
@@ -30,6 +32,8 @@ class KeyOctave extends MusicXMLWriter
 
 	/**
 	 * Cancel
+	 * -
+	 * If set to yes, then the number refers to the canceling key signature specified by the &lt;cancel&gt; element in the parent &lt;key&gt; element. It cannot be set to yes if there is no corresponding &lt;cancel&gt; element within the parent &lt;key&gt; element. It is no if absent.
 	 *
 	 * @Attribute(name="cancel")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

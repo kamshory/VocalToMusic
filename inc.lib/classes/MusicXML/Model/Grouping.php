@@ -21,6 +21,8 @@ class Grouping extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Indicates if this is a single-note grouping, or the start or stop of a multi-note grouping.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop-single" required="true", allowed="start,stop,single")
@@ -30,6 +32,8 @@ class Grouping extends MusicXMLWriter
 
 	/**
 	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -39,6 +43,8 @@ class Grouping extends MusicXMLWriter
 
 	/**
 	 * Member of
+	 * -
+	 * Distinguishes which &lt;grouping&gt; elements are in which hierarchy.
 	 *
 	 * @Attribute(name="member-of")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")
@@ -48,6 +54,8 @@ class Grouping extends MusicXMLWriter
 
 	/**
 	 * Number
+	 * -
+	 * Distinguishes between various overlapping and hierarchical groupings. The default value is 1.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

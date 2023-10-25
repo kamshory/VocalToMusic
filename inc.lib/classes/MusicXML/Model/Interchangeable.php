@@ -21,6 +21,8 @@ class Interchangeable extends MusicXMLWriter
 {
 	/**
 	 * Separator
+	 * -
+	 * Indicates how to display the arrangement between the &lt;beats&gt; and &lt;beat-type&gt; values in the second of the dual time signatures.
 	 *
 	 * @Attribute(name="separator")
 	 * @Value(type="time-separator" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Interchangeable extends MusicXMLWriter
 
 	/**
 	 * Symbol
+	 * -
+	 * Indicates how to display the second of the dual time signatures, such as by using common and cut time symbols or a single number display.
 	 *
 	 * @Attribute(name="symbol")
 	 * @Value(type="time-symbol" required="false", allowed="ANY_VALUE")

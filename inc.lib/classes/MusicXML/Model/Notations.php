@@ -21,6 +21,8 @@ class Notations extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Notations extends MusicXMLWriter
 
 	/**
 	 * Print object
+	 * -
+	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

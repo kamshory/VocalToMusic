@@ -21,6 +21,8 @@ class Rights extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Standard type values are music, words, and arrangement, but other types may be used. This attribute is only needed when there are multiple &lt;rights&gt; elements.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="false", allowed="ANY_VALUE")

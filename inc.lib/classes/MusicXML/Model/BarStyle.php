@@ -21,6 +21,8 @@ class BarStyle extends MusicXMLWriter
 {
 	/**
 	 * Color
+	 * -
+	 * Indicates the color of an element.
 	 *
 	 * @Attribute(name="color")
 	 * @Value(type="color" required="false", allowed="ANY_VALUE")

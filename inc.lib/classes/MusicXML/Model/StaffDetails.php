@@ -21,6 +21,8 @@ class StaffDetails extends MusicXMLWriter
 {
 	/**
 	 * Number
+	 * -
+	 * Specifies the staff number from top to bottom within the part. The value is 1 if not present.
 	 *
 	 * @Attribute(name="number")
 	 * @Value(type="staff-number" required="false", min="1", max="infinite")
@@ -30,6 +32,8 @@ class StaffDetails extends MusicXMLWriter
 
 	/**
 	 * Print object
+	 * -
+	 * Specifies whether or not to print an object. It is yes if not specified.
 	 *
 	 * @Attribute(name="print-object")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -39,6 +43,8 @@ class StaffDetails extends MusicXMLWriter
 
 	/**
 	 * Print spacing
+	 * -
+	 * Controls whether or not spacing is left for an invisible note or object. It is used only if no note, dot, or lyric is being printed. The value is yes (leave spacing) if not specified.
 	 *
 	 * @Attribute(name="print-spacing")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")
@@ -48,6 +54,8 @@ class StaffDetails extends MusicXMLWriter
 
 	/**
 	 * Show frets
+	 * -
+	 * Indicates whether to show tablature frets as numbers (0, 1, 2) or letters (a, b, c). It is numbers if not specified.
 	 *
 	 * @Attribute(name="show-frets")
 	 * @Value(type="show-frets" required="false", allowed="letters,numbers")

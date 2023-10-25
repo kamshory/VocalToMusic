@@ -21,6 +21,8 @@ class OtherAppearance extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * The appearance type being specified.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="token" required="true", allowed="ANY_VALUE")

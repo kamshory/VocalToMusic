@@ -21,6 +21,8 @@ class Credit extends MusicXMLWriter
 {
 	/**
 	 * Id
+	 * -
+	 * Specifies an ID that is unique to the entire document.
 	 *
 	 * @Attribute(name="id")
 	 * @Value(type="ID" required="false", allowed="ANY_VALUE")
@@ -30,6 +32,8 @@ class Credit extends MusicXMLWriter
 
 	/**
 	 * Page
+	 * -
+	 * Specifies the page number where the &lt;credit&gt; should appear. This is an integer value that starts with 1 for the first page. Its value is 1 if not specified. Since credits occur before the music, these page numbers do not refer to the page numbering specified by the &lt;print&gt; element's page-number attribute.
 	 *
 	 * @Attribute(name="page")
 	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")

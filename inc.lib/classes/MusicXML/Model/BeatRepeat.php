@@ -21,6 +21,8 @@ class BeatRepeat extends MusicXMLWriter
 {
 	/**
 	 * Type
+	 * -
+	 * Indicates the starting or stopping point of the section displaying the beat repeat symbols.
 	 *
 	 * @Attribute(name="type")
 	 * @Value(type="start-stop" required="true", allowed="start,stop")
@@ -30,6 +32,8 @@ class BeatRepeat extends MusicXMLWriter
 
 	/**
 	 * Slashes
+	 * -
+	 * Specifies the number of slashes to use in the symbol. The value is 1 if not specified.
 	 *
 	 * @Attribute(name="slashes")
 	 * @Value(type="positiveInteger" required="false", min="0", max="infinite")
@@ -39,6 +43,8 @@ class BeatRepeat extends MusicXMLWriter
 
 	/**
 	 * Use dots
+	 * -
+	 * Indicates whether or not to use dots as well (for instance, with mixed rhythm patterns). The value is no if not specified.
 	 *
 	 * @Attribute(name="use-dots")
 	 * @Value(type="yes-no" required="false", allowed="yes,no")

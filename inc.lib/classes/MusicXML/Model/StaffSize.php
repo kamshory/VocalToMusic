@@ -21,6 +21,8 @@ class StaffSize extends MusicXMLWriter
 {
 	/**
 	 * Scaling
+	 * -
+	 * Specifies the percentage scaling that applies to the notation. Values less that 100 make the notation smaller while values over 100 make the notation larger.
 	 *
 	 * @Attribute(name="scaling")
 	 * @Value(type="non-negative-decimal" required="false", min="-infinite", max="infinite")

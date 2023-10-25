@@ -21,6 +21,8 @@ class KeyAccidental extends MusicXMLWriter
 {
 	/**
 	 * Smufl
+	 * -
+	 * Specifies a Standard Music Font Layout (SMuFL) accidental character by its canonical glyph name.
 	 *
 	 * @Attribute(name="smufl")
 	 * @Value(type="smufl-accidental-glyph-name" required="false", allowed="ANY_VALUE")
