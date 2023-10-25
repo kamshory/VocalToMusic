@@ -63,7 +63,15 @@ abstract class MusicXMLBase
      */
     public function fixDuration($duration, $divisions, $timebase)
     {
-        return round($duration * $divisions / $timebase);
+        $duration = ($duration * $divisions / $timebase);
+        if(round($duration) == 0 && $duration != 0)
+        {
+            return ceil($duration);
+        }
+        else
+        {
+            return round($duration);
+        }
     }
     
     public function calculateDuration($duration0, $divisions, $timebase)

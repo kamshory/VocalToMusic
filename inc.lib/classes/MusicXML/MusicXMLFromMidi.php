@@ -44,7 +44,6 @@ use MusicXML\Util\MXL;
 class MusicXMLFromMidi extends MusicXMLBase
 {
     
-    const DEFAULT_DIVISONS = 24;
     private $widthScale = 6;
     private $minWidth = 120;
     /**
@@ -115,6 +114,9 @@ class MusicXMLFromMidi extends MusicXMLBase
     private $maxMeasure = 0;
     private $lastNote = array(); 
     private $tieStop = array();
+
+    private $defaultDivisions = 24;
+
 
     /**
      * Reset properties
@@ -882,10 +884,14 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $minDuration = $event['duration'];
                     }
                 }
-                $divisions = ceil($timebase * 24 / $minDuration);
-                if($divisions > self::DEFAULT_DIVISONS)
+                $divisions = ceil($timebase * $this->defaultDivisions / $minDuration);
+                if($divisions > $this->defaultDivisions)
                 {
-                    $divisions = self::DEFAULT_DIVISONS;
+                    //$divisions = $this->defaultDivisions;
+                }
+                if($measureIndex == 82)
+                {
+                    echo $divisions."\r\n";
                 }
                 $this->setMeasureDivisions($measureIndex, $divisions);
             }
@@ -1068,7 +1074,7 @@ class MusicXMLFromMidi extends MusicXMLBase
             {
                 foreach($beams as $beamNote)
                 {
-                    if($measure->elements[$beamNote->index] instanceof Note)
+                    if($measure->elements[$beamNote->index] instanceof Note && !isset($measure->elements[$beamNote->index]->rest))
                     {
                         $measure->elements[$beamNote->index]->beam = $beamNote->beam;
                     }
@@ -1120,7 +1126,10 @@ class MusicXMLFromMidi extends MusicXMLBase
                         $noteRest = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
                         
                         // add rest note
-                        $measure->elements[] = $noteRest;
+                        if($noteRest !== false)
+                        {
+                            $measure->elements[] = $noteRest;
+                        }
 
                         $end = $offset + $mod;
                         if ($lastEnd <= $end) {
@@ -1135,10 +1144,16 @@ class MusicXMLFromMidi extends MusicXMLBase
                 if ($this->needRestMiddle($offset, $lastEnd)) {
                     // add rest at the middle
                     $mod = $offset - $lastEnd;
-                    $noteRest2 = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
-                    
-                    // add rest note
-                    $measure->elements[] = $noteRest2;
+                    if($mod > 0)
+                    {
+                        $noteRest2 = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $mod, true);
+                        
+                        // add rest note
+                        if($noteRest2 !== false)
+                        {
+                            $measure->elements[] = $noteRest2;
+                        }
+                    }
                 }
 
                 if ($lastEnd <= $end) {
@@ -1178,11 +1193,18 @@ class MusicXMLFromMidi extends MusicXMLBase
 
         $modEnd = $lastEnd % ($this->timeSignature->getBeats() * $timebase);
 
-        if ($this->needRestEnd($modEnd, $cnt, $max)) {
+        if ($this->needRestEnd($modEnd, $cnt, $max)) 
+        {
             // add rest at the end
             $duration = $modEnd / $this->timeSignature->getBeats();
-            $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
-            $measure->elements[] = $note;
+            if($duration > 0)
+            {
+                $note = $this->createRestNote($measureIndex, $message, $divisions, $timebase, $duration);
+                if($note !== false)
+                {
+                    $measure->elements[] = $note;
+                }
+            }
         }
         return $measure;
     }
@@ -1214,15 +1236,18 @@ class MusicXMLFromMidi extends MusicXMLBase
         if($duration > 0)
         {
             $newDuration = $this->fixDuration($newDuration, $divisions, $timebase);
-            $note->duration = new Duration($newDuration);                                
-            $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
-            $note->release = $note->attack + $newDuration;
-            $tie = new Tie();
-            $tie->type = 'start';
-            $tied = new Tied();
-            $tied->type = 'start';
-            $note->tie = $tie;
-            $note->notations[0]->tied = $tied;
+            if($newDuration >= 1)
+            {
+                $note->duration = new Duration($newDuration);                                
+                $note->type = new Type(MusicXMLUtil::getNoteType($newDuration, $divisions));                
+                $note->release = $note->attack + $newDuration;
+                $tie = new Tie();
+                $tie->type = 'start';
+                $tied = new Tied();
+                $tied->type = 'start';
+                $note->tie = $tie;
+                $note->notations[0]->tied = $tied;
+            }
         }
         return $note;
     }
@@ -1256,14 +1281,18 @@ class MusicXMLFromMidi extends MusicXMLBase
      * @param integer $timebase
      * @param integer $duration
      * @param boolean $begining
-     * @return Note
+     * @return Note|false
      */
     private function createRestNote($measureIndex, $message, $divisions, $timebase, $duration, $begining = false)
     {
         $note = new Note();
+        $duration = $this->fixDuration($duration, $divisions, $timebase);
+        if($duration < 1)
+        {
+            return false;
+        }
         $rest = new Rest();
         $note->rest = $rest;
-        $duration = $this->fixDuration($duration, $divisions, $timebase);
         $note->duration = new Duration($duration);
         $note->type = new Type(MusicXMLUtil::getNoteType($duration, $divisions));    
         if($begining)
